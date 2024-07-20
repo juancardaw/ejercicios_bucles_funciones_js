@@ -16,12 +16,13 @@ const starWarsMovies = [
   
  const peliculasOrdenadas = [];
 
- const decada = (pelicula) => Math.floor(pelicula.releaseYear / 10) * 10 ;
+ const decada = (pelicula) => Math.floor(pelicula.releaseYear / 10) * 10;
 
  for(const pelicula of starWarsMovies){
     const año = decada(pelicula);
 
     let decadaCompleta = peliculasOrdenadas.find((decaObj) => decaObj.decada === año);
+
 
     if(!decadaCompleta){
         decadaCompleta = {
@@ -34,3 +35,6 @@ const starWarsMovies = [
  }
 
  console.log(peliculasOrdenadas);
+
+
+ 
