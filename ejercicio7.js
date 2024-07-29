@@ -13,3 +13,23 @@ const tracks = [
   
   // Añade tu código de bucle aquí
   
+  const tracksOrdenadas = [];
+
+  const grupoGenero = (tracks) => {const grupoMusica = {};
+
+  for(const {genre, title} of tracks){
+    let objGenero = grupoMusica[genre];
+
+    if(!objGenero){
+      objGenero = {
+        genre,
+        tracks: []};
+        grupoMusica[genre] = objGenero;
+    }
+    objGenero.tracks.push(title);
+  }
+  return grupoMusica;
+}
+const grupoMusica = grupoGenero(tracks);
+
+console.log(grupoMusica);
