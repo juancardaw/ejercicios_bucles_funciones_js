@@ -12,7 +12,14 @@ const xMen = [
   ];
   
   function findOldestXMen(xMen) {
-    // insert code
+
+    let personajeMenor = "";
+    for(const personaje of xMen){
+      if(!personajeMenor || personajeMenor.year > personaje.year){
+        personajeMenor = personaje
+      }
+    }
+    console.log(personajeMenor.name);
   }
-  
-  
+
+  findOldestXMen(xMen)
