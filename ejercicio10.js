@@ -12,19 +12,18 @@ const capitals = {
   };
   
   function getCapital(country) {
-   
- const ciudad = capitals[country];
+  const ciudad = capitals[country];
 
- if(ciudad){
-    const paisCapital = {
+  if(ciudad){
+    const ciudadObj = {
       Pais: country,
-      Capital: ciudad,
+      capital: ciudad
     }
-    return paisCapital; 
-  }else {
-    return "No existe este pais en la lista"
+    return ciudadObj;
+  } else {
+    return "El pais no existe"
+    } 
   }
-}
 
-const capitalFinal = getCapital("France");
-console.log(capitalFinal);
+  const totalCiudad = getCapital("Greece");
+  console.log(totalCiudad);
