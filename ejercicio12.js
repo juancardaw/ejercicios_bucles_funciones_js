@@ -12,6 +12,28 @@ const mutants = [
   ];
   
   function findMutantByPower(mutants, power) {
-    // insert code
+   
+    for(i = 0; i < mutants.length; i++){
+      if(mutants[i].power === power){
+        return "Encontrado un mutante o varios con el poder " + power;
+      }  
+    }
+    return "No se ha encontrado ningun mutante con ese poder";
   }
-  
+
+  const resultado = findMutantByPower(mutants, "teleportation");
+  console.log(resultado);
+
+
+
+
+  //Encontre una manera de hacerlo con el metodo .filter
+/*
+  const mutante = mutants.filter((personaje) => personaje.power === power);
+  if(mutante.length > 0){
+    return "mutante encontrando con poder", power;
+  } else {
+    return "Mutante no encontrado";
+  }
+    
+  */
