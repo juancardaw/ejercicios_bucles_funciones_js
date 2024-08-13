@@ -12,6 +12,15 @@ const actors = [
   ];
   
   function calculateActorsAges(actors) {
-    // insert code
+    
+    const nuevasFechas = [];
+
+    for(const actores of actors){
+    const fechaNacimiento = actores.born;
+    let año = (fechaNacimiento / 1000)
+    console.log(fechaNacimiento);
+
   }
+}
   
+  calculateActorsAges(actors)
