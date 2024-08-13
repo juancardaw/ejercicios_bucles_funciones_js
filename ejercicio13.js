@@ -13,14 +13,19 @@ const actors = [
   
   function calculateActorsAges(actors) {
     
-    const nuevasFechas = [];
+    const fechaActual = new Date();
+    const resultadoTotal = []
 
     for(const actores of actors){
     const fechaNacimiento = actores.born;
-    let año = (fechaNacimiento / 1000)
-    console.log(fechaNacimiento);
-
+    const añosTotal = fechaActual.getFullYear() - fechaNacimiento;
+    const totalActores = {
+      name: actores.name,
+      born: añosTotal
+    }
+    resultadoTotal.push(totalActores);
+    }
+    console.log(resultadoTotal);
   }
-}
-  
-  calculateActorsAges(actors)
+  const resultado = calculateActorsAges(actors);
+  console.log(resultado)
